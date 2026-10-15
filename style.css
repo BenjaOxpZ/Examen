@@ -1,0 +1,448 @@
+/* ==========================================================================
+   1. RESETEO Y DISEÑO MODO OSCURO PREMIUM (PEPSI HIGH-FI)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #070b19; /* Fondo azul noche ultra profundo, estilo cyberpunk/premium */
+    color: #f1f5f9;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Limpieza de flujos requerida para las estructuras float */
+.clear {
+    clear: both;
+}
+
+/* ==========================================================================
+   2. HEADER Y NAVEGACIÓN SEMI-TRANSPARENTE
+   ========================================================================== */
+#main-header {
+    background-color: rgba(7, 11, 25, 0.85); /* Cristal esmerilado blur */
+    backdrop-filter: blur(10px);
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(0, 75, 147, 0.4);
+}
+
+#logo-img {
+    height: 38px;
+    display: block;
+}
+
+#main-nav ul {
+    list-style: none;
+}
+
+#main-nav ul li a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 20px;
+}
+
+#main-nav ul li a:hover, 
+#main-nav ul li a.active {
+    color: #ffffff;
+    background-color: #004b93; /* Azul eléctrico Pepsi al pasar el cursor */
+}
+
+/* ==========================================================================
+   3. SECCIÓN HERO PREMIUM CON VIDEO DE FONDO (VIDEO BACKGROUND)
+   ========================================================================== */
+#hero {
+    position: relative;
+    width: 100%;
+    min-height: 80vh; /* Altura del bloque equivalente al 80% de la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Oculta cualquier desbordamiento del video */
+    padding: 100px 20px;
+}
+
+/* Estilo táctico para hacer que el video se comporte como un fondo real */
+#hero-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video llene el espacio sin deformarse */
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Se sitúa al fondo de todo */
+}
+
+/* Capa de degradado semi-transparente profesional sobre el video */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(7, 11, 25, 0.4), #070b19);
+    z-index: 2; /* Por encima del video, por debajo del texto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3; /* Por encima de la capa oscura y del video */
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    animation: brilloNeon 3s infinite ease-in-out;
+}
+
+#hero p {
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7); /* Sombra extra por si el video es muy claro */
+}
+
+/* Botón interactivo con transiciones de escala suaves */
+.btn-animado {
+    display: inline-block;
+    background: linear-gradient(135deg, #e31b23, #b31017);
+    color: #ffffff;
+    padding: 14px 36px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 20px rgba(227, 27, 35, 0.4);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+}
+
+.btn-animado:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(227, 27, 35, 0.6);
+}
+
+/* Animación de pulsación cromática sofisticada */
+@keyframes brilloNeon {
+    0%, 100% { text-shadow: 0 0 10px rgba(0, 75, 147, 0.6), 0 0 20px rgba(0, 75, 147, 0.4); }
+    50% { text-shadow: 0 0 20px rgba(227, 27, 35, 0.8), 0 0 40px rgba(0, 75, 147, 0.8); }
+}
+
+
+/* ==========================================================================
+   4. MAQUETACIÓN EN TARJETAS DE DEGRADADO (CAJAS FLOTANTES)
+   ========================================================================== */
+.columna {
+    width: 100%; /* Ajuste para vista de celular */
+    padding: 20px;
+}
+
+.tarjeta {
+    background: linear-gradient(145deg, #0f172a, #020617); /* Tarjetas oscuras traslúcidas */
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+/* Al pasar el mouse, las tarjetas flotan e iluminan su contorno con luz de neón */
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta.classic:hover { 
+    border-color: #004b93; 
+    box-shadow: 0 15px 30px rgba(0, 75, 147, 0.25); 
+}
+.tarjeta.black:hover { 
+    border-color: #e31b23; 
+    box-shadow: 0 15px 30px rgba(227, 27, 35, 0.25); 
+}
+.tarjeta.light:hover { 
+    border-color: #38bdf8; 
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.25); 
+}
+
+.prod-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5)); /* Sombra realista en las latas */
+    transition: transform 0.3s ease;
+}
+
+.tarjeta:hover .prod-img {
+    transform: rotate(5deg) scale(1.05); /* Pequeño giro dinámico al enfocar */
+}
+
+.tarjeta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* ==========================================================================
+   5. SECCIÓN MULTIMEDIA MODO ESTUDIO
+   ========================================================================== */
+#multimedia {
+    background-color: #020617;
+    padding: 80px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.container-media {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.media-box-left, .media-box-right {
+    width: 100%;
+    padding: 35px;
+    background: #0f172a;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.media-box-left h3, .media-box-right h3 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.media-subtitle {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.audio-player, .video-player {
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.video-player {
+    max-height: 250px;
+    background-color: #000;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Caja adaptativa estricta 16:9 para el Iframe externo */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   6. FOOTER FINO Y MINIMALISTA
+   ========================================================================== */
+#main-footer {
+    background-color: #020617;
+    color: #64748b;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   5.5 ESTILOS DE LA SECCIÓN CONTACTO
+   ========================================================================== */
+#contacto {
+    padding: 60px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contacto-wrapper {
+    width: 100%;
+}
+
+/* Aplicamos cajas flotantes profesionales a los bloques de contacto */
+.contacto-info, .contacto-redes {
+    width: 100%;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+}
+
+.contacto-info h3, .contacto-redes h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contacto-info p, .contacto-redes p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.contacto-info ul {
+    list-style: none;
+}
+
+.contacto-info ul li {
+    color: #cbd5e1;
+    font-size: 0.92rem;
+    margin-bottom: 10px;
+}
+
+.contacto-info ul li strong {
+    color: #004b93; /* Resaltado en azul Pepsi */
+}
+
+.redes-links {
+    margin-top: 15px;
+}
+
+/* Botones de redes sociales interactivos */
+.link-red {
+    display: inline-block;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.link-red:hover {
+    background-color: #004b93; /* Cambia a azul al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Ajuste de diseño responsivo para pantallas de escritorio (>= 768px) */
+@media screen and (min-width: 768px) {
+    .contacto-info {
+        width: 48%;
+        float: left;
+        margin-bottom: 0;
+    }
+    .contacto-redes {
+        width: 48%;
+        float: right;
+        margin-bottom: 0;
+    }
+}
+
+/* ==========================================================================
+   7. DISEÑO RESPONSIVO EXIGIDO (MEDIA QUERIES)
+   ========================================================================== */
+
+/* DISPOSITIVOS MÓVILES (< 768px) */
+@media screen and (max-width: 767px) {
+    #main-header .logo, #main-nav {
+        text-align: center;
+        width: 100%;
+    }
+    #main-nav ul li {
+        display: inline-block;
+        margin-top: 10px;
+    }
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* COMPUTADORAS DE ESCRITORIO (>= 768px) */
+@media screen and (min-width: 768px) {
+    #main-header .logo {
+        float: left;
+    }
+    #main-header #main-nav {
+        float: right;
+    }
+    #main-nav ul li {
+        display: inline-block;
+    }
+
+    /* Maquetación del Caso Práctico: 3 Columnas Flotantes con float: left */
+    .columna {
+        width: 33.333%;
+        float: left;
+    }
+
+    /* Distribución paralela en 2 bloques flotantes para Multimedia */
+    .media-box-left {
+        width: 48%;
+        float: left;
+    }
+    .media-box-right {
+        width: 48%;
+        float: right;
+    }
+}

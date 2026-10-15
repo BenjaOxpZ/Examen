@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi | Thirsty For More</title>
+    <meta name="description" content="Página promocional oficial de Pepsi. Explora nuestra gama de productos y comerciales exclusivos.">
+    <meta name="keywords" content="pepsi, pepsi black, refresco, bebidas, diseño web, html5, css3">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Estructura Semántica: Header -->
+    <header id="main-header">
+        <div class="logo">
+            <img src="imagen/Pepsi-Logo (1).png" alt="Logotipo Oficial de Pepsi" id="logo-img">
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#multimedia">Media</a></li>
+                <li><a href="#main-footer">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+    </header>
+    <main>
+        
+    <!-- Sección de Bienvenida -->
+        <section id="hero">
+            <video autoplay loop muted playsinline id="hero-video-bg">
+                <source src="video/bucle.mp4" type="video/mp4">
+            </video>        
+            <div class="hero-overlay"></div>
+            
+            <div class="hero-content">
+                <h2>THIRSTY FOR MORE</h2>
+                <p>Desafía tus límites, rompe las reglas y elige el sabor refrescante que mueve al mundo entero.</p>
+                <a href="#productos" class="btn-animado">Descubrir Sabores</a>
+            </div>
+        </section>
+
+
+        <!-- Sección Principal: Cajas Flotantes mediante div y float -->
+        <section id="productos" class="container">
+            <h2 class="section-title">Elige Tu Sabor</h2>
+            
+            <!-- Columna 1 -->
+            <div class="columna">
+                <div class="tarjeta classic">
+                    <img src="imagen/original.png" alt="Lata de Pepsi Classic Original" class="prod-img">
+                    <h3>Pepsi Classic</h3>
+                    <p>La cola que lo cambió todo: una explosión de frescura intensa, con esa dulzura irresistible y un toque cítrico inconfundible que despierta tus sentidos. Es el sabor audaz y vibrante hecho para los que se atreven a elegir diferente y romper la rutina.</p>
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="columna">
+                <div class="tarjeta black">
+                    <img src="imagen/black.png" alt="Lata de Pepsi Black Cero Azúcar" class="prod-img">
+                    <h3>Pepsi Black</h3>
+                    <p>El lado más salvaje de la frescura. Una combinación perfecta donde el misterio de la cereza silvestre se fusiona con la intensidad de Pepsi, dándote un estallido de sabor frutal y un final ultra refrescante. Todo el sabor que te vuela la cabeza, con cero azúcar y cero calorías.</p>
+                </div>
+            </div>
+
+            <!-- Columna 3 -->
+            <div class="columna">
+                <div class="tarjeta light">
+                    <img src="imagen/Zeroazucar.png" alt="Lata de Pepsi Light Cero Calorías" class="prod-img">
+                    <h3>Pepsi Zero Cherry</h3>
+                    <p>Máxima intensidad sin remordimientos. El auténtico y robusto sabor de Pepsi llevado al límite, con un perfil profundamente refrescante y un toque audaz que desafía todo lo que conocías sobre lo sin azúcar. Cero límites, cero calorías, todo el sabor. </p>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </section>
+
+        <!-- Sección de Recursos Multimedia e Integración -->
+        <section id="multimedia">
+            <div class="container-media">
+                <h2 class="section-title">Estación Multimedia</h2>
+                <div class="multimedia-wrapper">
+                    
+                    <!-- Bloque de Contenido Local -->
+                    <div class="media-box-left">
+                        <h3>Componentes Locales</h3>
+                        
+                        <p class="media-subtitle">Spot Radial</p>
+                        <audio controls class="audio-player">
+                            <source src="audio/publicitario.mp3" type="audio/mpeg">
+                        </audio>
+                        
+                        <!--reproductor de video local -->
+                        <p class="media-subtitle">Promoción Oficial</p>
+                        <video controls class="video-player">
+                            <source src="video/pepsi.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!-- Bloque de Incrustación Externa mediante Iframe -->
+                    <div class="media-box-right">
+                        <h3>Incrustación Externa</h3>
+                        <p class="media-subtitle">Campaña Global</p>
+                        <div class="video-responsive">
+                            <iframe src="video/publicidad.mp4" title="Pepsi Global Commercial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Sección de Contacto Corporativo (Antes del cierre de main o integrado al final) -->
+    <section id="contacto" class="container">
+        <div class="contacto-wrapper">
+            <div class="contacto-info">
+                <h3>Contacto PepsiCo Perú</h3>
+                <p>¿Tienes dudas, comentarios o te interesa ser distribuidor oficial? Comunícate con nuestros canales de atención corporativa.</p>
+                <ul>
+                    <li><strong>Dirección:</strong> Av. De la República 3615, San Isidro, Lima, Perú</li>
+                    <li><strong>Teléfono de Atención:</strong> 0-800-1-0101 (Línea gratuita nacional)</li>
+                    <li><strong>Correo Institucional:</strong> contacto.peru@pepsico.com</li>
+                </ul>
+            </div>
+            
+            <div class="contacto-redes">
+                <h3>Síguenos en nuestras redes</h3>
+                <p>Entérate de las últimas campañas, eventos y promociones exclusivas antes que nadie.</p>
+                <!-- Enlaces absolutos externos requeridos por la teoría de la Unidad 1 -->
+                <div class="redes-links">
+                    <a href="https://facebook.com" target="_blank" class="link-red">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="link-red">Instagram</a>
+                    <a href="https://twitter.com" target="_blank" class="link-red">X (Twitter)</a>
+                </div>
+            </div>
+            <div class="clear"></div> <!-- Limpieza de flujos de la estructura de contacto -->
+        </div>
+    </section>
+
+    <!-- Estructura Semántica Obligatoria: Footer -->
+    <footer id="main-footer">
+        <p>&copy; 2026 PepsiCo Inc. Maquetación avanzada desarrollada para la Evaluación Parcial de Diseño Web - Universidad de Ciencias y Humanidades (UCH).</p>
+    </footer>
+
+
+</body>
+</html>
